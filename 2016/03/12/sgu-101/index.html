@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="FFT,算法," />
+  <meta name="keywords" content="sgu," />
 
 
 
@@ -57,19 +57,22 @@
 
 
 
-<meta name="description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
-算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
+<meta name="description" content="Domino
+time limit per test: 0.25 sec.memory limit per test: 4096 KB
+Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on it">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FFT">
-<meta property="og:url" content="http://yoursite.com/2016/03/12/FFT/index.html">
+<meta property="og:title" content="Domino - sgu 101">
+<meta property="og:url" content="http://yoursite.com/2016/03/12/sgu-101/index.html">
 <meta property="og:site_name" content="Jiian">
-<meta property="og:description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
-算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
-<meta property="og:updated_time" content="2016-03-12T11:57:01.707Z">
+<meta property="og:description" content="Domino
+time limit per test: 0.25 sec.memory limit per test: 4096 KB
+Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on it">
+<meta property="og:updated_time" content="2016-03-12T15:48:37.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FFT">
-<meta name="twitter:description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
-算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
+<meta name="twitter:title" content="Domino - sgu 101">
+<meta name="twitter:description" content="Domino
+time limit per test: 0.25 sec.memory limit per test: 4096 KB
+Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on it">
 
 
 
@@ -87,7 +90,7 @@
   };
 </script>
 
-  <title> FFT | Jiian </title>
+  <title> Domino - sgu 101 | Jiian </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +220,7 @@
             
             
               
-                FFT
+                Domino - sgu 101
               
             
           </h1>
@@ -229,7 +232,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-12T17:47:49+08:00" content="2016-03-12">
+            <time itemprop="dateCreated" datetime="2016-03-12T23:46:25+08:00" content="2016-03-12">
               2016-03-12
             </time>
           </span>
@@ -256,18 +259,22 @@
       
 
       
-        <p><strong>先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)</strong><br>前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，<br>看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。</p>
-<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>先简单介绍下卷积：<br>假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$<br>将它们相乘得到 $$C(x) = c_ix^i$$<br>对于系数数组<strong>a[]</strong> <strong>b[]</strong>, 乘积的系数数组<strong>c[]</strong>就是它们的卷积<br>通过中学的知识我们可以知道<br>$$c_i = \sum_{j=0}^na_ib_{i-j}$$<br>对于系数数组a[] b[], 乘积的系数数组c[]就是它们的卷积<br>其中c[i]有n项，那么这种求卷积的方法的复杂度就是<strong>O(n^2)</strong><br>对于稍微大一点点的n，这种方法就GG了<br>所以这时候我们的FFT就登场了，通过FFT我们可以在<strong>O(nlogn)</strong>内得到两个数组的卷积</p>
-<p>这里就需要了解另一个概念：点值表达式<br>比如对于上面的多项式A(x)，当x=xk时，A(xk)=yk，(xk,yk)就是它的一个点值表达式<br>易得$$C(x_k) = A(x_k)B(x_k)$$<br>所以如果我们能够得到A，B的点值表达式，那么我们就可以在<strong>O(n)</strong>内求出C<br>DFT：<br>DFT是指x取单位n次根时，将多项式转换为点值表达式的方法，其复杂度为<strong>O(n^2)</strong><br>FFT:<br>FFT是指用分治的方法将DFT的复杂度优化为O(nlogn)，下面是公式<br>$$A^{[0]}(x) = a_0 + a_2x + … + a_nx^{n-1}$$<br>$$A^{[1]}(x) = a_1 + a_3x + … + {a_{n-1}}x^{n-1}$$<br>$$A(x) = A^{[0]}(x^2) + xA^{[1]}(x^2)$$<br>∴ y[k] = y[0][k] + x[k]<em>y[1][k]<br>　　　＝ y[0][k] + wn^k</em>y[1][k]<br>　y[k + n/2] = y[0][k] + wn^(k + n/2)<em>y[1][k]<br>　　　　　　＝ y[0][k] - wn^k </em> y[1][k]<br>　（这里运用到了消去引理和折半引理，具体参考《算法导论》）</p>
-<p>于是复杂度的问题就解决了，我们可以在O(nlogn)内求得c[]数组：<br>A(x) = FFT(a[])<br>B(x) = FFT(b[])<br>C(x) = A(x)*B(x)<br>c[] = FFT^-1(C(x))</p>
-<p>其中还有一些细节可以参考下《算法导论》（不过我认为FFT只要大致了解内容会用模板就行）</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="递归版FFT"><a href="#递归版FFT" class="headerlink" title="递归版FFT"></a>递归版FFT</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(<span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; a[], <span class="keyword">int</span> n, <span class="keyword">int</span> on)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (len == <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; a0[n &gt;&gt; <span class="number">1</span>], a1[n &gt;&gt; <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; i ++) &#123;</span><br><span class="line">    a0[i] = a[i &lt;&lt; <span class="number">1</span>];</span><br><span class="line">    a1[i] = a[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  FFT(a0, n &gt;&gt; <span class="number">1</span>, on);</span><br><span class="line">  FFT(a1, n &gt;&gt; <span class="number">1</span>, on);</span><br><span class="line">  <span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; wn(<span class="built_in">cos</span>(<span class="number">2</span> * pi / n), <span class="built_in">sin</span>(on * <span class="number">2</span> * pi / n)), w(<span class="number">1</span>, <span class="number">0</span>), t;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; i ++) &#123;</span><br><span class="line">    a[i] = a0[i] + w * a1[i];</span><br><span class="line">    a[i + n / <span class="number">2</span>] = a0[i] - w * a1[i];</span><br><span class="line">    w *= wn;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我们可以发现，例如在0~7这8个数中<br>原数组：    0  1  2  3  4  5  6  7<br>折半一次：  0  2  4  6，1  3  5  7<br>折半二次：  0  4，2  6，1  5，3  7</p>
-<p>原数组二进制表示：  000， 001， 010， 011， 100， 101， 110， 111<br>终数组二进制表示：  000， 100， 010， 110， 001， 101， 011， 111</p>
-<p>最终数组对应位置的数是原数组的二进制取反</p>
-<h4 id="非递归版FFT"><a href="#非递归版FFT" class="headerlink" title="非递归版FFT"></a>非递归版FFT</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">struct Complex &#123;</span><br><span class="line">  double i, r;</span><br><span class="line">  Complex(double r = 0, double i = 0) : r(r), i(i) &#123;&#125;;</span><br><span class="line">  Complex operator + (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r + a.r, i + a.i);</span><br><span class="line">  &#125;</span><br><span class="line">  Complex operator - (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r - a.r, i - a.i);</span><br><span class="line">  &#125;</span><br><span class="line">  Complex operator * (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r * a.r - i * a.i, i * a.r + r * a.i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void rader(Complex F[], int len) &#123;</span><br><span class="line">  for (int i = 1, j = len &gt;&gt; 1; i &lt; len - 1; i ++) &#123;</span><br><span class="line">    if (i &lt; j) swap(F[i], F[j]);</span><br><span class="line">    int k = len &gt;&gt; 1;</span><br><span class="line">    for (; j &gt;= k; k &gt;&gt;= 1) j ^= k;</span><br><span class="line">    j |= k;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void FFT(Complex F[], int len, int on) &#123;</span><br><span class="line">  rader(F, len);</span><br><span class="line">  for (int h = 2; h &lt;= len; h &lt;&lt;= 1) &#123;</span><br><span class="line">    Complex wn(cos(- on * 2 * pi / h), sin(- on * 2 * pi / h));</span><br><span class="line">    for (int j = 0; j &lt; len; j += h) &#123;</span><br><span class="line">      Complex w(1, 0);</span><br><span class="line">      for (int k = j; k &lt; j + h / 2; k ++) &#123;</span><br><span class="line">        Complex u = F[k];</span><br><span class="line">        Complex t = w * F[k + h / 2];</span><br><span class="line">        F[k] = u + t;</span><br><span class="line">        F[k + h / 2] = u - t;</span><br><span class="line">        w = w * wn;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  if (on == -1)</span><br><span class="line">    for (int i = 0; i &lt; len; i ++)</span><br><span class="line">      F[i].r /= len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><a href="http://codeforces.com/contest/632/problem/E" target="_blank" rel="external">Thief in a Shop</a></p>
-<p><a href="http://codeforces.com/contest/632/submission/16670186" target="_blank" rel="external">code</a></p>
+        <p><a href="http://acm.sgu.ru/problem.php?contest=0&amp;problem=101" target="_blank" rel="external">Domino</a></p>
+<p>time limit per test: 0.25 sec.<br>memory limit per test: 4096 KB</p>
+<p>Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.<br>The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice…</p>
+<p>The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</p>
+<p>ENCYCLOPÆDIA BRITANNICA</p>
+<p>Given a set of domino pieces where each side is marked with two digits from 0 to 6. Your task is to arrange pieces in a line such way, that they touch through equal marked sides. It is possible to rotate pieces changing left and right side.</p>
+<p>Input</p>
+<p>The first line of the input contains a single integer N (1 ≤ N ≤ 100) representing the total number of pieces in the domino set. The following N lines describe pieces. Each piece is represented on a separate line in a form of two digits from 0 to 6 separated by a space.</p>
+<p>Output</p>
+<p>Write “No solution” if it is impossible to arrange them described way. If it is possible, write any of way. Pieces must be written in left-to-right order. Every of N lines must contains number of current domino piece and sign “+” or “-“ (first means that you not rotate that piece, and second if you rotate it).</p>
+<p>Sample Input</p>
+<p> 5<br>1 2<br>2 4<br>2 4<br>6 4<br>2 1<br>Sample Output</p>
+<p>2 -<br>5 +<br>1 +<br>3 +<br>4 -</p>
+<p>给你一些多米诺骨牌，每块的两部分都标记上 0 到 6 的号码，你的任务是把这些骨牌排列在一条直线上，使得相邻骨牌的相邻部分有同样的号码。骨牌可以左右翻转。</p>
+<p>很水的一题，我不知道为什么貌似我的输出顺序有问题，一直wa，最后照着别人的AC代码改了下才过的。</p>
+<p>code:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> node &#123;</span><br><span class="line">  <span class="keyword">int</span> a, i;</span><br><span class="line">  <span class="keyword">char</span> d;</span><br><span class="line">  node (<span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> i = <span class="number">0</span>, <span class="keyword">char</span> d = <span class="number">0</span>) : a(a), i(i), d(d) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span> &lt;node&gt; v[<span class="number">10</span>], ans;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">110</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp; x : v[k]) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[x.i]) &#123;</span><br><span class="line">      vis[x.i] = <span class="number">1</span>;</span><br><span class="line">      dfs(x.a);</span><br><span class="line">      ans.push_back(x);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">int</span> st;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</span><br><span class="line">    st = a;</span><br><span class="line">    v[a].push_back(node(b, i, <span class="string">'+'</span>));</span><br><span class="line">    v[b].push_back(node(a, i, <span class="string">'-'</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (v[i].size() &amp; <span class="number">1</span>) cnt ++, st = i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (cnt &gt; <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  dfs(st);</span><br><span class="line">  <span class="keyword">if</span> (ans.size() != n) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (ans.size()) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %c\n"</span>, ans.back().i, ans.back().d);</span><br><span class="line">    ans.pop_back();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -282,9 +289,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/FFT/" rel="tag">#FFT</a>
-          
-            <a href="/tags/算法/" rel="tag">#算法</a>
+            <a href="/tags/sgu/" rel="tag">#sgu</a>
           
         </div>
       
@@ -293,13 +298,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/12/FFT/" rel="next" title="FFT">
+                <i class="fa fa-chevron-left"></i> FFT
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/12/sgu-101/" rel="prev" title="Domino - sgu 101">
-                Domino - sgu 101 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -410,7 +415,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归版FFT"><span class="nav-number">2.1.</span> <span class="nav-text">递归版FFT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非递归版FFT"><span class="nav-number">2.2.</span> <span class="nav-text">非递归版FFT</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
