@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="FFT,算法," />
 
 
 
@@ -57,19 +57,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
+算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/03/11/hello-world/index.html">
+<meta property="og:title" content="FFT">
+<meta property="og:url" content="http://yoursite.com/2016/03/12/FFT/index.html">
 <meta property="og:site_name" content="Jiian">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-11T17:56:27.690Z">
+<meta property="og:description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
+算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
+<meta property="og:updated_time" content="2016-03-12T10:05:45.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="FFT">
+<meta name="twitter:description" content="先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。
+算法先简单介绍下卷积：假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$将它们相乘得到 $$C(x) = c_ix^i$$对于系数数组">
 
 
 
@@ -87,7 +87,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | Jiian </title>
+  <title> FFT | Jiian </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -122,7 +122,7 @@ Quick">
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">acm life in college</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -217,7 +217,7 @@ Quick">
             
             
               
-                Hello World
+                FFT
               
             
           </h1>
@@ -229,8 +229,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T23:59:08+08:00" content="2016-03-11">
-              2016-03-11
+            <time itemprop="dateCreated" datetime="2016-03-12T17:47:49+08:00" content="2016-03-12">
+              2016-03-12
             </time>
           </span>
 
@@ -256,15 +256,17 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p><strong>先上结论，FFT就是用分治的方法将求卷积的复杂度优化为O(nlogn)</strong><br>前段时间codeforces出了一题要用FFT求卷积的题之后，就一直想学习FFT，<br>看了《算法导论》和其它一些大神的博客之后也大致了解了FFT是个啥。</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>先简单介绍下卷积：<br>假设有两个关于x的多项式 $$A(x) = a_ix^i$$ $$B(x) = b_ix^i$$<br>将它们相乘得到 $$C(x) = c_ix^i$$<br>对于系数数组<strong>a[]</strong> <strong>b[]</strong>, 乘积的系数数组<strong>c[]</strong>就是它们的卷积<br>通过中学的知识我们可以知道 $$c<em>i = \sum</em>{j=0}^n{a<em>ib</em>{i-j}}$$<br>对于系数数组a[] b[], 乘积的系数数组c[]就是它们的卷积<br>其中c[i]有n项，那么这种求卷积的方法的复杂度就是<strong>O(n^2)</strong><br>对于稍微大一点点的n，这种方法就GG了<br>所以这时候我们的FFT就登场了，通过FFT我们可以在<strong>O(nlogn)</strong>内得到两个数组的卷积</p>
+<p>这里就需要了解另一个概念：点值表达式<br>比如对于上面的多项式A(x)，当x=xk时，A(xk)=yk，(xk,yk)就是它的一个点值表达式<br>易得$$C(x_k) = A(x_k)B(x_k)$$<br>所以如果我们能够得到A，B的点值表达式，那么我们就可以在<strong>O(n)</strong>内求出C<br>DFT：<br>DFT是指x取单位n次根时，将多项式转换为点值表达式的方法，其复杂度为<strong>O(n^2)</strong><br>FFT:<br>FFT是指用分治的方法将DFT的复杂度优化为O(nlogn)，下面是公式<br>$$A^{[0]}(x) = a_0 + a_2x + … + a_nx^{n-1}$$<br>$$A^{[1]}(x) = a_1 + a<em>3x + … + a</em>{n-1}x^{n-1}$$<br>$$A(x) = A^{[0]}(x^2) + xA^{[1]}(x^2)$$<br>∴ y[k] = y[0][k] + x[k]<em>y[1][k]<br>　　　＝ y[0][k] + wn^k</em>y[1][k]<br>　y[k + n/2] = y[0][k] + wn^(k + n/2)<em>y[1][k]<br>　　　　　　＝ y[0][k] - wn^k </em> y[1][k]<br>　（这里运用到了消去引理和折半引理，具体参考《算法导论》）</p>
+<p>于是复杂度的问题就解决了，我们可以在O(nlogn)内求得c[]数组：<br>A(x) = FFT(a[])<br>B(x) = FFT(b[])<br>C(x) = A(x)*B(x)<br>c[] = FFT^-1(C(x))</p>
+<p>其中还有一些细节可以参考下《算法导论》（不过我认为FFT只要大致了解内容会用模板就行）</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="递归版FFT"><a href="#递归版FFT" class="headerlink" title="递归版FFT"></a>递归版FFT</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(<span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; a[], <span class="keyword">int</span> n, <span class="keyword">int</span> on)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (len == <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; a0[n &gt;&gt; <span class="number">1</span>], a1[n &gt;&gt; <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; i ++) &#123;</span><br><span class="line">    a0[i] = a[i &lt;&lt; <span class="number">1</span>];</span><br><span class="line">    a1[i] = a[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  FFT(a0, n &gt;&gt; <span class="number">1</span>, on);</span><br><span class="line">  FFT(a1, n &gt;&gt; <span class="number">1</span>, on);</span><br><span class="line">  <span class="keyword">complex</span> &lt;<span class="keyword">double</span>&gt; wn(<span class="built_in">cos</span>(<span class="number">2</span> * pi / n), <span class="built_in">sin</span>(on * <span class="number">2</span> * pi / n)), w(<span class="number">1</span>, <span class="number">0</span>), t;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; i ++) &#123;</span><br><span class="line">    a[i] = a0[i] + w * a1[i];</span><br><span class="line">    a[i + n / <span class="number">2</span>] = a0[i] - w * a1[i];</span><br><span class="line">    w *= wn;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以发现，例如在0~7这8个数中<br>原数组：    0  1  2  3  4  5  6  7<br>折半一次：  0  2  4  6，1  3  5  7<br>折半二次：  0  4，2  6，1  5，3  7</p>
+<p>原数组二进制表示：  000， 001， 010， 011， 100， 101， 110， 111<br>终数组二进制表示：  000， 100， 010， 110， 001， 101， 011， 111</p>
+<p>最终数组对应位置的数是原数组的二进制取反</p>
+<h4 id="非递归版FFT"><a href="#非递归版FFT" class="headerlink" title="非递归版FFT"></a>非递归版FFT</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">struct Complex &#123;</span><br><span class="line">  double i, r;</span><br><span class="line">  Complex(double r = 0, double i = 0) : r(r), i(i) &#123;&#125;;</span><br><span class="line">  Complex operator + (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r + a.r, i + a.i);</span><br><span class="line">  &#125;</span><br><span class="line">  Complex operator - (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r - a.r, i - a.i);</span><br><span class="line">  &#125;</span><br><span class="line">  Complex operator * (const Complex &amp; a) const &#123;</span><br><span class="line">    return Complex(r * a.r - i * a.i, i * a.r + r * a.i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void rader(Complex F[], int len) &#123;</span><br><span class="line">  for (int i = 1, j = len &gt;&gt; 1; i &lt; len - 1; i ++) &#123;</span><br><span class="line">    if (i &lt; j) swap(F[i], F[j]);</span><br><span class="line">    int k = len &gt;&gt; 1;</span><br><span class="line">    for (; j &gt;= k; k &gt;&gt;= 1) j ^= k;</span><br><span class="line">    j |= k;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void FFT(Complex F[], int len, int on) &#123;</span><br><span class="line">  rader(F, len);</span><br><span class="line">  for (int h = 2; h &lt;= len; h &lt;&lt;= 1) &#123;</span><br><span class="line">    Complex wn(cos(- on * 2 * pi / h), sin(- on * 2 * pi / h));</span><br><span class="line">    for (int j = 0; j &lt; len; j += h) &#123;</span><br><span class="line">      Complex w(1, 0);</span><br><span class="line">      for (int k = j; k &lt; j + h / 2; k ++) &#123;</span><br><span class="line">        Complex u = F[k];</span><br><span class="line">        Complex t = w * F[k + h / 2];</span><br><span class="line">        F[k] = u + t;</span><br><span class="line">        F[k + h / 2] = u - t;</span><br><span class="line">        w = w * wn;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  if (on == -1)</span><br><span class="line">    for (int i = 0; i &lt; len; i ++)</span><br><span class="line">      F[i].r /= len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><a href="http://codeforces.com/contest/632/problem/E" target="_blank" rel="external">Thief in a Shop</a><br>这道题便是我一开始提到的codeforces的题<br><a href="http://codeforces.com/contest/632/submission/16670186" target="_blank" rel="external">code</a></p>
 
       
     </div>
@@ -276,6 +278,14 @@ Quick">
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/FFT/" rel="tag">#FFT</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
+          
+        </div>
       
 
       
@@ -350,6 +360,13 @@ Quick">
           
 
           
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
 
         </nav>
 
@@ -378,7 +395,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归版FFT"><span class="nav-number">2.1.</span> <span class="nav-text">递归版FFT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非递归版FFT"><span class="nav-number">2.2.</span> <span class="nav-text">非递归版FFT</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
