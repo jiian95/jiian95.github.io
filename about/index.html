@@ -1,400 +1,156 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-
-
-
-
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
-
-
-
-
-
-
-<meta name="description" content="2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能够取得一定的成绩。
-本博客暂时用于记录我的解题报告常用ID: JiianCF ID: BBbuff （明年1月改成Jiian - -）
-欢迎各位菊苣来D">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jiian">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
-<meta property="og:site_name" content="Jiian">
-<meta property="og:description" content="2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能够取得一定的成绩。
-本博客暂时用于记录我的解题报告常用ID: JiianCF ID: BBbuff （明年1月改成Jiian - -）
-欢迎各位菊苣来D">
-<meta property="og:updated_time" content="2016-03-12T10:13:14.640Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jiian">
-<meta name="twitter:description" content="2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能够取得一定的成绩。
-本博客暂时用于记录我的解题报告常用ID: JiianCF ID: BBbuff （明年1月改成Jiian - -）
-欢迎各位菊苣来D">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: '博主'
-    }
-  };
-</script>
-
-  <title>
+  <meta charset="utf-8">
   
+  <title>Jiian</title>
+  <meta name="author" content="Jiian">
+  
+  <meta name="description" content="2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能够取得一定的成绩。
+本博客暂时用于记录我的解题报告常用ID">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-     | Jiian
+  <meta property="og:site_name" content="Jiian"/>
+
   
-</title>
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Jiian" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiian</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
     
-  
-
-  <div class="container one-collumn sidebar-position-left  ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta custom-logo">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Jiian</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
 </nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+  
+  <div class="post-content">
+    <header>
+      
+      
+  
+    <h1 class="title"></h1>
+  
 
- </div>
     </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-    
-      <p>2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,<br>不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能<br>够取得一定的成绩。</p>
+    <div class="entry">
+      
+        <p>2014级弱菜ACM选手, 高中时学了一阵子OI, 但没出什么成绩, 大学之后没进CS专业, 而是误打误撞进了工科学校的商科,<br>不过专业成绩差的一塌糊涂, 之前大二转cs专业的想法也破灭。 然而对于ACM还是热情高涨, 希望在大学有限的时间里能<br>够取得一定的成绩。</p>
 <p>本博客暂时用于记录我的解题报告<br>常用ID: Jiian<br>CF ID: <a href="http://codeforces.com/profile/BBbuff" target="_blank" rel="external">BBbuff</a> （明年1月改成Jiian - -）</p>
 <p>欢迎各位菊苣来D</p>
 
-    
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      
     </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
   </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
 
       
-
-      
-
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/default_avatar.jpg"
-               alt="Jiian" />
-          <p class="site-author-name" itemprop="name">Jiian</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-          
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-      </section>
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jiian</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-
-      </div>
+      <div class="clearfix"></div>
     </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
   </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
 
   
-
-
-  
-
-
-
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
 
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
+<div class="fb-comments" data-href="http://jiian95.github.io/about/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
   
+</section>
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
-
-
-
-  
+</div></div>
+    <aside id="sidebar" class="alignright">
   
 
   
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FFT/" style="font-size: 10px;">FFT</a> <a href="/tags/SGU/" style="font-size: 20px;">SGU</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+  </div>
+</div>
 
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
-
-
-
+  &copy; 2016 Jiian
   
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
 
-  
 
-
-
-  
-  
-  
-
-  
-
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 </body>
 </html>

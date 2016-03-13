@@ -1,265 +1,70 @@
-<!doctype html>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Domino - SGU 101 | Jiian</title>
+  <meta name="author" content="Jiian">
+  
+  <meta name="description" content="描述Domino">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
+  <meta property="og:title" content="Domino - SGU 101"/>
+  <meta property="og:site_name" content="Jiian"/>
 
   
+    <meta property="og:image" content="undefined"/>
+  
 
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Jiian" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
 
-<html class="theme-next mist use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-
-
-
-
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="SGU," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
-
-
-
-
-
-
-<meta name="description" content="描述Domino
-time limit per test: 0.25 sec.memory limit per test: 4096 KB
-Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Domino - SGU 101">
-<meta property="og:url" content="http://yoursite.com/2016/03/12/sgu-101/index.html">
-<meta property="og:site_name" content="Jiian">
-<meta property="og:description" content="描述Domino
-time limit per test: 0.25 sec.memory limit per test: 4096 KB
-Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on">
-<meta property="og:updated_time" content="2016-03-13T13:23:41.803Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Domino - SGU 101">
-<meta name="twitter:description" content="描述Domino
-time limit per test: 0.25 sec.memory limit per test: 4096 KB
-Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: '博主'
-    }
-  };
-</script>
-
-  <title> Domino - SGU 101 | Jiian </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiian</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
     
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta custom-logo">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Jiian</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
 </nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-03-12T15:46:25.000Z"><a href="/2016/03/12/sgu-101/">2016-03-12</a></time>
+      
+      
+  
+    <h1 class="title">Domino - SGU 101</h1>
+  
 
- </div>
     </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Domino - SGU 101
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-12T23:46:25+08:00" content="2016-03-12">
-              2016-03-12
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <div class="entry">
       
         <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p><a href="http://acm.sgu.ru/problem.php?contest=0&amp;problem=101" target="_blank" rel="external">Domino</a></p>
+<a id="more"></a>
 <p>time limit per test: 0.25 sec.<br>memory limit per test: 4096 KB</p>
 <p>Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.<br>The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice…</p>
 <p>The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</p>
@@ -274,443 +79,99 @@ Dominoes – game played with small, rectangular blocks of wood or other materia
 <p>2 -<br>5 +<br>1 +<br>3 +<br>4 -</p>
 <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给你一些多米诺骨牌，每块的两部分都标记上 0 到 6 的号码，你的任务是把这些骨牌排列在一条直线上，使得相邻骨牌的相邻部分有同样的号码。骨牌可以左右翻转。</p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>很水的一题，我不知道为什么貌似我的输出顺序有问题，一直wa，最后照着别人的AC代码改了下才过的。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>code:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> node &#123;</span><br><span class="line">  <span class="keyword">int</span> a, i;</span><br><span class="line">  <span class="keyword">char</span> d;</span><br><span class="line">  node (<span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> i = <span class="number">0</span>, <span class="keyword">char</span> d = <span class="number">0</span>) : a(a), i(i), d(d) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span> &lt;node&gt; v[<span class="number">10</span>], ans;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">110</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp; x : v[k]) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[x.i]) &#123;</span><br><span class="line">      vis[x.i] = <span class="number">1</span>;</span><br><span class="line">      dfs(x.a);</span><br><span class="line">      ans.push_back(x);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">int</span> st;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</span><br><span class="line">    st = a;</span><br><span class="line">    v[a].push_back(node(b, i, <span class="string">'+'</span>));</span><br><span class="line">    v[b].push_back(node(a, i, <span class="string">'-'</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (v[i].size() &amp; <span class="number">1</span>) cnt ++, st = i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (cnt &gt; <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  dfs(st);</span><br><span class="line">  <span class="keyword">if</span> (ans.size() != n) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (ans.size()) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %c\n"</span>, ans.back().i, ans.back().d);</span><br><span class="line">    ans.pop_back();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> node &#123;</span><br><span class="line">  <span class="keyword">int</span> a, i;</span><br><span class="line">  <span class="keyword">char</span> d;</span><br><span class="line">  node (<span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> i = <span class="number">0</span>, <span class="keyword">char</span> d = <span class="number">0</span>) : a(a), i(i), d(d) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span> &lt;node&gt; v[<span class="number">10</span>], ans;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">110</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp; x : v[k]) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[x.i]) &#123;</span><br><span class="line">      vis[x.i] = <span class="number">1</span>;</span><br><span class="line">      dfs(x.a);</span><br><span class="line">      ans.push_back(x);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">int</span> st;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</span><br><span class="line">    st = a;</span><br><span class="line">    v[a].push_back(node(b, i, <span class="string">'+'</span>));</span><br><span class="line">    v[b].push_back(node(a, i, <span class="string">'-'</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (v[i].size() &amp; <span class="number">1</span>) cnt ++, st = i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (cnt &gt; <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  dfs(st);</span><br><span class="line">  <span class="keyword">if</span> (ans.size() != n) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"No solution"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (ans.size()) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %c\n"</span>, ans.back().i, ans.back().d);</span><br><span class="line">    ans.pop_back();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
-
-    <div>
+    <footer>
       
         
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/SGU/" rel="tag">#SGU</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/03/12/FFT/" rel="next" title="FFT">
-                <i class="fa fa-chevron-left"></i> FFT
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/13/sgu-103/" rel="prev" title="Traffic Lights - SGU 103">
-                Traffic Lights - SGU 103 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
+        
+  
+  <div class="tags">
+    <a href="/tags/SGU/">SGU</a>
   </div>
 
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
     
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
   </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
 
       
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/default_avatar.jpg"
-               alt="Jiian" />
-          <p class="site-author-name" itemprop="name">Jiian</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-          
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">2.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">3.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jiian</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-
-      </div>
+      <div class="clearfix"></div>
     </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
   </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
 
   
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
+<div class="fb-comments" data-href="http://jiian95.github.io/2016/03/12/sgu-101/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
 
+</div></div>
+    <aside id="sidebar" class="alignright">
   
 
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FFT/" style="font-size: 10px;">FFT</a> <a href="/tags/SGU/" style="font-size: 20px;">SGU</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Jiian
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
-
-
-
-  
-  
-
-  
-  
-<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-  
-  
-  
-
-  
-
-
-
-<!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
 </body>
 </html>
